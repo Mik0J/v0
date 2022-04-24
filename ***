@@ -1,4 +1,5 @@
 
+
 #include<iostream>
 #include<conio.h>
 #include<dos.h> 
@@ -55,9 +56,8 @@ void genEnemy(int ind) {
 void drawEnemy(int ind) {
 	if (enemyFlag[ind] == true) {
 		gotoxy(enemyX[ind], enemyY[ind]);   cout << "****";
-		gotoxy(enemyX[ind], enemyY[ind] + 1); cout << " ** ";
-		gotoxy(enemyX[ind], enemyY[ind] + 2); cout << "****";
-		gotoxy(enemyX[ind], enemyY[ind] + 3); cout << " ** ";
+		gotoxy(enemyX[ind], enemyY[ind] + 1); cout << "****";
+		gotoxy(enemyX[ind], enemyY[ind] + 2); cout << " ** ";
 	}
 }
 void eraseEnemy(int ind) {
@@ -65,7 +65,6 @@ void eraseEnemy(int ind) {
 		gotoxy(enemyX[ind], enemyY[ind]); cout << "    ";
 		gotoxy(enemyX[ind], enemyY[ind] + 1); cout << "    ";
 		gotoxy(enemyX[ind], enemyY[ind] + 2); cout << "    ";
-		gotoxy(enemyX[ind], enemyY[ind] + 3); cout << "    ";
 	}
 }
 void resetEnemy(int ind) {
@@ -136,13 +135,6 @@ void play() {
 	genEnemy(0);
 	genEnemy(1);
 
-	gotoxy(WIN_WIDTH + 7, 2); cout << "Car Game";
-	gotoxy(WIN_WIDTH + 6, 4); cout << "----------";
-	gotoxy(WIN_WIDTH + 6, 6); cout << "----------";
-	gotoxy(WIN_WIDTH + 7, 12); cout << "Control ";
-	gotoxy(WIN_WIDTH + 7, 13); cout << "-------- ";
-	gotoxy(WIN_WIDTH + 2, 14); cout << " A Key - Left";
-	gotoxy(WIN_WIDTH + 2, 15); cout << " D Key - Right";
 
 	gotoxy(18, 5); cout << "Press any key to start";
 	_getch();
@@ -223,5 +215,3 @@ int main()
 
 	return 0;
 }
-
-
